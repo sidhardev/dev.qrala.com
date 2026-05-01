@@ -3,7 +3,7 @@ name: Deploy PHP App via FTP
 on:
   push:
     branches:
-      - prod   
+      - main   
 
 jobs:
   web-deploy:
