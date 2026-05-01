@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dev.qrala.com/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Directories and files to disallow (if any)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Host
+Host: https://dev.qrala.com
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
