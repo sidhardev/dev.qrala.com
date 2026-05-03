@@ -4,8 +4,8 @@ import { goTo, zoomIn, zoomOut, getCurrentIndex } from './camera.js';
 
 // ── Loading Screen ────────────────────────────────────────────
 const TERMINAL_LINES = [
-  'Initialising Showroom...',
-  'Loading WebGL Engine...',
+  'Compiling Shaders...',
+  'Loading Assets...',
   'Building 3D Environment...',
   'Calibrating Neon Lights...',
   'Placing Project Pedestals...',
@@ -86,7 +86,7 @@ export function initNavControls() {
   document.getElementById('btn-prev').addEventListener('click', () => navigateFn(getCurrentIndex() - 1));
   document.getElementById('btn-next').addEventListener('click', () => navigateFn(getCurrentIndex() + 1));
 
-  // View Project button
+  // Explore Tech button
   document.getElementById('btn-view-project').addEventListener('click', () => {
     openModal(getCurrentIndex());
   });

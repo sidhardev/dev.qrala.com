@@ -134,7 +134,7 @@ export function buildLights() {
   // Per-pedestal spotlights
   const defs = [
     { color: 0x00f5ff, x: -5.5, z: -4 },   // cyan  — VisionSecure
-    { color: 0xffb300, x:  0,   z: -10 },  // amber — SG Automobiles
+    { color: 0xffb300, x:  0,   z: -10 },  // amber — Automobile App
     { color: 0xc400ff, x:  5.5, z: -4 },   // violet — LMS
   ];
 
