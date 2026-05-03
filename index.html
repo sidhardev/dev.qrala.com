@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dev Sidhar — Full-Stack Developer specializing in AI, real-time systems, and scalable backend architecture. Explore my 3D interactive portfolio." />
+  <meta name="keywords" content="Dev Sidhar, Full-Stack Developer, AI, Three.js, Portfolio, VisionSecure, PHP, Backend" />
+  <title>Dev Sidhar | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ LOADING SCREEN -->
+  <div id="loading-screen">
+    <div id="loading-logo">DS</div>
+    <div id="terminal-box">
+      <div id="terminal-output"></div>
+      <span class="cursor">█</span>
+    </div>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text">0%</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ 3D CANVAS -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════════ HUD -->
+  <div id="hud" class="hidden">
+
+    <!-- Brand (top-left) -->
+    <div id="brand">
+      <h1 id="brand-name">DEV SIDHAR</h1>
+      <p id="brand-role">Full-Stack Developer</p>
+    </div>
+
+    <!-- Current project label (top-center) -->
+    <div id="project-label">
+      <div id="project-label-name"></div>
+      <div id="project-label-sub"></div>
+    </div>
+
+    <!-- Hint top-right -->
+    <div id="hint-box">
+      <span>SCROLL / ARROW KEYS</span>
+    </div>
+
+    <!-- Side arrow navigation -->
+    <button id="btn-prev" class="arrow-btn" aria-label="Previous project">&#8592;</button>
+    <button id="btn-next" class="arrow-btn" aria-label="Next project">&#8594;</button>
+
+    <!-- View Project CTA -->
+    <button id="btn-view-project">View Project ↗</button>
+
+    <!-- Nav dots (bottom-center) -->
+    <div id="nav-dots">
+      <button class="nav-dot active" data-idx="0" aria-label="VisionSecure"></button>
+      <button class="nav-dot" data-idx="1" aria-label="SG Automobiles"></button>
+      <button class="nav-dot" data-idx="2" aria-label="Loyalty Management"></button>
+    </div>
+
+    <!-- Contact bar (bottom) -->
+    <div id="contact-bar">
+      <a href="mailto:devsuthar065@gmail.com" id="contact-email">devsuthar065@gmail.com</a>
+      <div id="social-links">
+        <a href="https://www.linkedin.com/in/dev-sidhar-6251862b8/" target="_blank" rel="noopener" id="link-linkedin">LinkedIn</a>
+        <a href="https://github.com/sidhardev" target="_blank" rel="noopener" id="link-github">GitHub</a>
+        <span id="contact-location">📍 India</span>
+      </div>
+    </div>
+
+  </div><!-- /hud -->
+
+  <!-- ═══════════════════════════════════════════ PROJECT MODAL -->
+  <div id="project-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop"></div>
+    <div id="modal-content">
+      <button id="modal-close" aria-label="Close modal">✕</button>
+      <div id="modal-header">
+        <div id="modal-icon-canvas-wrap">
+          <canvas id="modal-icon-canvas" width="80" height="80"></canvas>
+        </div>
+        <div id="modal-header-text">
+          <h2 id="modal-title"></h2>
+          <p id="modal-subtitle"></p>
+        </div>
+      </div>
+      <p id="modal-description"></p>
+      <div id="modal-tech-stack"></div>
+      <div id="modal-actions">
+        <a id="modal-live-link" href="#" target="_blank" rel="noopener">
+          <span>Live Project</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <button id="modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ THREE.JS -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>
